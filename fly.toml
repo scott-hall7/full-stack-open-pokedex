@@ -26,3 +26,10 @@ primary_region = "atl"
 [build]
   [build.args]
     NODE_VERSION = "16.19.1"
+
+[[http_service.checks]]
+  grace_period = "10s"
+  interval = "30s"
+  method = "GET"
+  timeout = "5s"
+  path = "/health"
